@@ -156,6 +156,7 @@ module system (
  	input  clk_mpu, // MPU401 clock 
 	input  clk_dsp,
 	input  clk_cpu,
+	input  init_reset,
 
 	input  clk_en_opl2,  // OPL2 clock enable (3.58 MHz)
 	input  clk_en_44100, // COVOX/DSS clock enable
@@ -560,6 +561,7 @@ module system (
 	SDRAM_16bit SDR
 	(
 		.sys_CLK(clk_sdr),				// clock
+		.reset_in(init_reset),
 		.sys_CMD(cntrl0_user_command_register),					// 00=nop, 01 = write 64 bytes, 10=read 32 bytes, 11=read 64 bytes
 		.sys_ADDR(sdraddr),	// word address
 		.sys_DIN(BIOS_data_valid ? BIOS_data : cntrl0_user_input_data),		// data input
