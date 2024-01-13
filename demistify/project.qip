@@ -1,0 +1,9 @@
+# set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) ../mist/build_id.v]
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) Next186_MiST.sv]
+set_global_assignment -name SDC_FILE [file join $::quartus(qip_path) Next186_MiST.sdc]
+set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) "../mist-modules/mist.qip"]
+set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) ../rtl/Next186.qip]
+# set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) ../mist/cyc10/dcm.qip]
+# set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) ../mist/cyc10/dcm_misc.qip]
+# set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) ../mist/cyc10/dcm_cpu.qip]
+

@@ -15,3 +15,10 @@ build_id.v
 *.rpt
 *.smsg
 *.summary
+*.dsk
+*.img
+*.log
+*.asm
+*.o
+controller.bin
+controller.map
