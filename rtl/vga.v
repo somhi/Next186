@@ -249,7 +249,7 @@ module VGA_CRT(
 		if(ce_vga) begin
 			hcount <= hcount + 1'd1;
 			if (hch_en) begin
-				if (hchar == htotal + 4'd5) begin
+				if (hchar == htotal + 4'd4) begin
 					hcount <= 0;
 					hblnk <= 0;
 					hsync <= 0;
@@ -264,14 +264,14 @@ module VGA_CRT(
 	// This logic describes a 10-bit vertical position counter.         //
 	//******************************************************************//
 	always @(posedge clk_vga)
-		if(ce_vga && hch_en && hchar == htotal + 4'd5) begin
+		if(ce_vga && hch_en && hchar == htotal + 4'd4) begin
 			vcount <= vcount + 1'd1;
 			char_ln <= char_ln + 1'd1;
 			if (char_ln == replncnt) begin
 				char_ln <= 0;
 				char_row <= char_row + 1'd1;
 			end
-			if (vcount == vtotal) begin
+			if (vcount == vtotal + 4'd1) begin
 				char_ln <= line_preset;
 				vcount <= 0;
 				vblnk <= 0;
