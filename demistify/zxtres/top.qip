@@ -1,0 +1,7 @@
+set_global_assignment -name VERILOG_FILE  [file join $::quartus(qip_path) ../defs_demistify.v]
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "zxtres_top.sv"]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) dcm.v]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) dcm_misc.v]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) dcm_cpu.v]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) rtl/joydecoder.v]
+
