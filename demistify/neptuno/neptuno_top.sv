@@ -108,9 +108,6 @@ assign PS2_MOUSE_CLK = !ps2_mouse_clk_out ? 1'b0 : 1'bZ;
 assign PS2_MOUSE_DAT = !ps2_mouse_dat_out ? 1'b0 : 1'bZ;
 
 
-
-
-
 `GUEST_TOP guest
 (
  .CLOCK_27 (CLOCK_50),
